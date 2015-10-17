@@ -1,7 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Register.aspx.cs" Inherits="Register" %>
-
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
@@ -25,16 +23,26 @@
                         <%-- Registration Email --%>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <asp:Label Text="Password" ID="LabelPassword" CssClass="label label-info pull-right" runat="server" />
-                            <asp:TextBox runat="server" ID="TextBoxPassword" placeholder="Password" CssClass="panel-group form-control" />
+                            <asp:TextBox runat="server" ID="TextBoxPassword" placeholder="Password" TextMode="Password" CssClass="panel-group form-control" />
                         </div>
                         <%-- Registration Password --%>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <asp:Label Text="Email ID" ID="LabelEmail" CssClass="label label-info pull-right" runat="server" />
-                            <asp:TextBox runat="server" ID="TextBoxEmail" placeholder="Email ID" CssClass="panel-group form-control" />
+                            <asp:TextBox runat="server" ID="TextBoxEmail" placeholder="Email ID" TextMode="Email" CssClass="panel-group form-control" />
+                        </div>
+                        <%-- Registration DOB --%>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <asp:Label Text="Date Of Birth" ID="LabelDOB" CssClass="label label-info pull-right" runat="server" />
+                            <asp:TextBox runat="server" ID="TextBoxDOB" placeholder="Date Of Birth" TextMode="DateTime" CssClass="panel-group form-control" />
+                        </div>
+                        <%-- Registration Mobile Number --%>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <asp:Label Text="MobileNumber" ID="LabelMobileNumber" CssClass="label label-info pull-right" runat="server" />
+                            <asp:TextBox runat="server" ID="TextBoxMobileNumber" placeholder="MobileNumber" TextMode="Phone" CssClass="panel-group form-control" />
                         </div>
                     </div>
                     <div class="panel-footer">
-                        <asp:Button Text="Submit" ID="ButtonRegister" CssClass="btn btn-block btn-success" runat="server" />
+                        <asp:Button Text="Submit" ID="ButtonRegister" CssClass="btn btn-block btn-success" OnClick="ButtonRegister_Click" runat="server" />
                     </div>
                 </div>
             </div>
@@ -48,16 +56,16 @@
                         <%-- Login Email --%>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <asp:Label Text="Email ID" ID="LabelEmailLogin" CssClass="label label-info pull-right" runat="server" />
-                            <asp:TextBox runat="server" ID="TextBoxEmailLogin" placeholder="Email ID" CssClass="panel-group form-control" />
+                            <asp:TextBox runat="server" ID="TextBoxEmailLogin" placeholder="Email ID" TextMode="Email" CssClass="panel-group form-control" />
                         </div>
                         <%-- Login Password --%>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <asp:Label Text="Password" ID="LabelPasswordLogin" CssClass="label label-info pull-right" runat="server" />
-                            <asp:TextBox runat="server" ID="TextBoxPasswordLogin" placeholder="Password" CssClass="panel-group form-control" />
+                            <asp:TextBox runat="server" ID="TextBoxPasswordLogin" placeholder="Password" TextMode="Password" CssClass="panel-group form-control" />
                         </div>
                     </div>
                     <div class="panel-footer">
-                        <asp:Button Text="Login" ID="ButtonLogin" CssClass="btn btn-block btn-success" runat="server" />
+                        <asp:Button Text="Login" ID="ButtonLogin" CssClass="btn btn-block btn-success" OnClick="ButtonLogin_Click" runat="server" />
                     </div>
                 </div>
             </div>
